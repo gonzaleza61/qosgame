@@ -14,7 +14,7 @@ export const App = () => {
 
       <Container x={200} y={200}>
         <Text
-          text="Hello World"
+          text="QoS Game"
           anchor={0.5}
           x={220}
           y={150}
