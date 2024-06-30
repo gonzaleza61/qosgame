@@ -5,26 +5,24 @@ import { useRef, useEffect } from "react";
 import { Stage, Sprite } from "@pixi/react";
 
 export const App = () => {
-  const bunnyUrl = "https://pixijs.io/pixi-react/img/bunny.png";
+  const qosSprite = "queenofswords.png";
   const stageRef = useRef();
-  const bunnyRef = useRef();
+  const qosSpriteRef = useRef();
 
   useEffect(() => {
+    console.log(stageRef.current.props.height);
+    console.log(qosSpriteRef.current);
+
     const handleKeyDown = (event) => {
       // Arrow keys movement example
       const speed = 5; // Adjust as needed
+
       switch (event.key) {
-        case "ArrowUp":
-          bunnyRef.current.y -= speed;
-          break;
-        case "ArrowDown":
-          bunnyRef.current.y += speed;
-          break;
         case "ArrowLeft":
-          bunnyRef.current.x -= speed;
+          qosSpriteRef.current.x -= speed;
           break;
         case "ArrowRight":
-          bunnyRef.current.x += speed;
+          qosSpriteRef.current.x += speed;
           break;
         default:
           break;
@@ -47,7 +45,7 @@ export const App = () => {
       height={500}
       options={{ background: 0x1099bb }}
     >
-      <Sprite ref={bunnyRef} image={bunnyUrl} x={0} y={463} />
+      <Sprite ref={qosSpriteRef} image={qosSprite} x={0} y={432} />
     </Stage>
   );
 };
