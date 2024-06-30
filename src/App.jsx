@@ -42,10 +42,10 @@ export const App = () => {
     <Stage
       ref={stageRef}
       width={1000}
-      height={500}
+      height={1000}
       options={{ background: 0x1099bb }}
     >
-      <Sprite ref={qosSpriteRef} image={qosSprite} x={0} y={432} />
+      <Sprite ref={qosSpriteRef} image={qosSprite} x={0} y={932} />
     </Stage>
   );
 };
